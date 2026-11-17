@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lives na Cidade Alta – FiveM</title>
+  <meta name="description" content="Streamers de FiveM ao vivo agora na Cidade Alta (CDA), na Twitch e na Kick.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Lives na Cidade Alta</h1>
+    <p class="sub">Streamers de FiveM ao vivo agora, na Twitch e na Kick.</p>
+    <div class="roadline" aria-hidden="true"></div>
+    <div class="bar">
+      <p class="count" id="count" aria-live="polite">Buscando lives…</p>
+      <div class="filters" role="group" aria-label="Filtrar por plataforma">
+        <button type="button" data-filter="all" aria-pressed="true">Todas</button>
+        <button type="button" data-filter="twitch" aria-pressed="false">Twitch</button>
+        <button type="button" data-filter="kick" aria-pressed="false">Kick</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="notices"></div>
+    <ul id="grid" class="grid"></ul>
+    <p id="empty" class="empty" hidden>Nenhuma live da CDA aberta agora. A lista se atualiza sozinha a cada minuto.</p>
+  </main>
+
+  <footer>
+    <span id="updated"></span>
+    <button type="button" id="refresh">Atualizar agora</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
